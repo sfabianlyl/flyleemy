@@ -1,0 +1,30 @@
+:root{
+    --primary:#27348b;
+    --secondary:#39adca;
+
+    --primaryHover:#1f2a6e;
+    --secondaryHover:#308ca3;
+
+    --black:#1d1d1b;
+    --white:#f3faff;
+
+    --link:blue;
+    --linkHover:darkblue;
+
+    --background:#f3faff;
+    --bodyText:#1d1d1b;
+
+    --background2:#BBDFEC;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: var(--secondary);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--secondary);
+}
+
+::placeholder {
+    color: var(--secondary);
+}

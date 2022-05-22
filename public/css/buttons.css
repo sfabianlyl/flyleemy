@@ -1,0 +1,94 @@
+.btn-primary, .btn-secondary, .btn-tertiary, .btn-secondary-light, .btn-rockwell{
+    padding: 1rem 3rem;
+    border-radius: 1000px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: border-color .4s, color .4s, background-color .4s;
+    display: inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+}
+
+
+
+:is(.btn-primary, .btn-secondary, .btn-tertiary, .btn-secondary-light, .btn-rockwell):hover{
+    text-decoration:none;
+}
+
+
+.btn-primary{
+    border-color:var(--primary);
+    color:var(--white);
+    background-color:var(--primary);
+}
+
+.btn-primary:hover{
+    border-color:var(--primaryHover);
+    color:var(--white);
+    background-color:var(--primaryHover);
+}
+
+.btn-secondary{
+    border-color:var(--primary);
+    color:var(--primary);
+    background-color:transparent;
+}
+
+.btn-secondary:hover{
+    border-color:var(--primaryHover);
+    color:var(--white);
+    background-color:var(--primaryHover);
+}
+
+.btn-secondary-light{
+    border-color:var(--secondary);
+    color:var(--secondary);
+    background-color:transparent;
+}
+
+.btn-secondary-light:hover{
+    border-color:var(--secondaryHover);
+    color:var(--white);
+    background-color:var(--secondaryHover);
+}
+
+.btn-rockwell{
+    font-family: Rockwell;
+    text-transform: unset;
+    color:var(--primary);
+    border-color:var(--primary);
+    background-color:transparent;
+}
+
+.btn-rockwell:hover{
+    border-color:var(--primaryHover);
+    color:var(--white);
+    background-color:var(--primaryHover);
+}
+
+@media only screen and (min-width:1200px){
+    .btn-primary, .btn-secondary, .btn-tertiary, .btn-secondary-light, .btn-rockwell{
+        padding:1.0vw 3.0vw;
+        font-size:1.5vw;
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 800px) and (max-width:1200px){
+    .btn-primary, .btn-secondary, .btn-tertiary, .btn-secondary-light, .btn-rockwell{
+        padding:1.0vw 3.0vw;
+        font-size:1.5vw;
+    }
+}
+
+ /* mobile  */
+@media only screen and (max-width: 800px) {
+    .btn-primary, .btn-secondary, .btn-tertiary, .btn-secondary-light, .btn-rockwell{
+        padding:.5rem 1.5rem;
+        font-size:1rem;
+    }
+}

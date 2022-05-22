@@ -1,0 +1,215 @@
+:root{
+    scroll-padding-top:calc( var(--navheight, 100px) + .5rem);
+    scroll-behavior:smooth;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    height:var(--navheight);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+}
+/* body{
+    padding-top:150px;
+} */
+.header-logo{
+    width:calc( var(--navheight, 100px) - 3rem);
+    margin-left: calc(10% - 1.5rem);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo a{
+    display:block;
+}
+
+
+.header-menu{
+    display:flex;
+    justify-content:stretch;
+    align-items:stretch;
+}
+.header-menu a{
+    color:var(--black);
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    text-align: center;
+    position:relative;
+    text-transform:uppercase;
+    margin-right:calc(var(--navheight) / 9 );
+    font-size:calc(var(--navheight)/12);
+}
+.header-menu a.active{
+    color:var(--primary);
+    font-weight:bold;
+}
+.header-menu a:hover{
+    text-decoration:none;
+    color:var(--primaryHover);
+}
+.header-menu a::after{
+    content:'';
+    display:block;
+    position:absolute;
+    width:0;
+    height:2px;
+    bottom:40%;
+    left:-5%;
+    background-color:var(--primary);
+    transition:width .2s ease-out;
+}
+.header-menu a:hover::after{
+    width:110%;
+}
+
+.header-menu-mobile{
+    align-self:center;
+    margin-right:1.5rem;
+}
+
+#menu_toggle{
+    cursor:pointer;
+}
+.navbar-toggler {
+    height: calc(var(--navheight) - 3rem);
+    width:calc(var(--navheight) - 3rem);
+    padding: .25rem;
+    border: 1px solid var(--secondary);
+    position:relative;
+}
+
+.menu-icon-bar {
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    display: block;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    transition: transform 0.5s ease-out, top 0.5s ease-out;
+    transform:translate(-50%,-50%) rotate(var(--bar-rotation));
+    left:50%;
+}
+
+
+
+button.collapsed .top-bar {
+    top:35%;
+    --bar-rotation:360deg;
+}
+button.collapsed .middle-bar {
+    top: 50%;
+    --bar-rotation:720deg;
+}
+button.collapsed .bottom-bar {
+    top: 65%;
+    --bar-rotation:360deg;
+}
+button:not(.collapsed) .top-bar {
+    top: 50%;
+    --bar-rotation:45deg;
+}
+
+button:not(.collapsed) .middle-bar {
+    --bar-rotation:45deg;
+}
+button:not(.collapsed) .bottom-bar {
+    top: 50%;
+    --bar-rotation:-45deg;
+}
+
+
+/* mobile sidebar  */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    padding-top:var(--navheight);
+    z-index: 999;
+    color: var(--white);
+    transition: all 0.4s;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    overflow-y: hidden;
+    background-color: var(--primary);
+    text-align: right;
+}
+#sidebar.active{
+    right:0;
+}
+.overlay.active {
+    display: block;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+}
+
+a.sidebar-link{
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+a.sidebar-link.active{
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+/* desktop */
+@media only screen and (min-width:1200px){
+    header{
+        padding:.5rem 1rem;
+    }
+    :root{
+        --navheight:200px;
+    }
+    .header-menu-mobile{
+        display:none;
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 800px) and (max-width:1200px){
+    header{
+        padding:.5rem 1rem;
+    }
+    :root{
+        --navheight:200px;
+    }
+    .header-menu-mobile{
+        display:none;
+    }
+}
+
+ /* mobile  */
+@media only screen and (max-width: 800px) {
+    header{
+        padding:.5rem;
+    }
+    :root{
+        --navheight:100px;
+    }
+    .header-menu{
+        display:none;
+    }
+    .header-logo{
+        width:calc( var(--navheight, 100px) - 1rem);
+       
+    }
+    .navbar-toggler {
+        height: calc(var(--navheight) * .7);
+        width:calc(var(--navheight) * .7 );
+    }
+}

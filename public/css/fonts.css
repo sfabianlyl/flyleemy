@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Rockwell;
+    src: url("../fonts/Rockwell.ttf");
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: MontserratItalic;
+    src: url("../fonts/Montserrat-Italic.ttf");
+}
+@font-face {
+    font-family: MontserratBold;
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+    font-family: MontserratBoldItalic;
+    src: url("../fonts/Montserrat-BoldItalic.ttf");
+}
+@font-face {
+    font-family: MontserratSemiBold;
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+    font-family: MontserratSemiBoldItalic;
+    src: url("../fonts/Montserrat-SemiBoldItalic.ttf");
+}
+@font-face {
+    font-family: MontserratExtraBold;
+    src: url("../fonts/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+    font-family: MontserratExtraBoldItalic;
+    src: url("../fonts/Montserrat-ExtraBoldItalic.ttf");
+}
+@font-face {
+    font-family: MontserratBlack;
+    src: url("../fonts/Montserrat-Black.ttf");
+}
+@font-face {
+    font-family: MontserratBlackItalic;
+    src: url("../fonts/Montserrat-BlackItalic.ttf");
+}
+@font-face {
+    font-family: MontserratLight;
+    src: url("../fonts/Montserrat-Light.ttf");
+}
+@font-face {
+    font-family: MontserratLightItalic;
+    src: url("../fonts/Montserrat-LightItalic.ttf");
+}
+@font-face {
+    font-family: MontserratExtraLight;
+    src: url("../fonts/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+    font-family: MontserratExtraLightItalic;
+    src: url("../fonts/Montserrat-ExtraLightItalic.ttf");
+}
+
+
+.primary{
+    color:var(--primary) !important;
+}
+.secondary{
+    color:var(--secondary) !important;
+}
+
+.rockwell{
+    font-family: Rockwell !important;
+}
+.montserrat{
+    font-family: Montserrat !important;
+}
+
+h1,h2,h3{
+    color:var(--primary);
+}
+
+h1, h2{
+    font-family:Rockwell;
+}
+
+h3, h4{
+    font-family:MontserratSemiBold;
+}
+
+h5,h6{
+    font-family:Montserrat;
+}
+
+h4,h5,h6{
+    color:var(--secondary);
+}
+
+html, body{
+    font-family:Montserrat;
+    color:var(--bodyText);
+    background-color:var(--background) !important;
+}
+:not(h1,h2,h3,h4,h5,h6) i{
+    font-family:MontserratItalic;
+}
+
+strong, b{
+    font-family:MontserratBold;
+}
+
+button{
+    font-family:Montserrat;
+}
+
+.link{
+    color:var(--link) !important;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.link:hover{
+    color:var(--linkHover) !important;
+    text-decoration: underline;
+}
